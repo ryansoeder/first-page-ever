@@ -1,0 +1,189 @@
+@font-face{
+  font-family: "Amity";
+  src: url('fonts/Amity Jack.ttf');
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background: linear-gradient(rgba(255, 248, 237, .3) 70%, rgba(255, 248, 237)),
+              url("img/sketch.jpg"),
+              rgba(255, 248, 237) center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(black 25%, transparent),
+                linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)),
+                url("img/paisley3.jpg") top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 10px;
+    position: fixed;
+    top: 0;
+}
+
+header p{
+  color: #e8cc3f;
+  margin: 0 40px 0 0;
+  line-height: 0;
+  font-weight: bold;
+}
+
+h1{
+  margin: 30px 40px 0 0;
+  text-align: right;
+  font-family: "Amity", monospace;
+  font-size: 3.1rem;
+  color: #e8cc3f;
+  letter-spacing: 1.2px;
+  text-shadow: 3px 3px 0 indigo;
+}
+
+h2{
+  font-family: monospace;
+  font-size: calc(3rem + 1vw);
+  float: left;
+}
+
+p{
+  font-family: monospace;
+  text-align: right;
+  font-size: calc(1rem + 0.3vw);
+
+}
+
+nav{
+  position: fixed;
+  left: 0;
+  top: 110px;
+}
+
+li{
+  list-style: none;
+}
+
+main{
+  width: 80%;
+  margin: 110px auto auto 140px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.sections {
+  overflow: auto;
+  border: solid 3px black;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .95);
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: monospace;
+}
+
+#littlefish{
+  float: left;
+  width: 100px;
+  border: groove 3px maroon;
+  border-radius: 50%;
+  margin: 20px 0 0 30px;
+  display: block;
+  transition: all .5s;
+}
+#littlefish:hover{
+  transform: scale(1.1);
+}
+
+.navbuttons{
+  width: 80px;
+  margin: 5px 0 0 0;
+  opacity: .7;
+  transition: all .5s ease;
+}
+.navbuttons:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.showinfo{
+  font-size: calc(1rem + 0.3vw);
+  text-align: right;
+  border-bottom: dotted 2px black;
+  padding: 0 0 20px;
+  margin-top: 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 730px) {
+  main{
+    width: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1, header > p{
+    display: none;}
+
+  main{
+    width: 80%;
+    margin: 140px auto auto auto;
+  }
+
+  nav{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbuttons{
+    opacity: 1;
+  }
+
+  #buttons{
+    margin: 10 0 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 15px;
+  }
+  #buttons li{
+    display: inline-block;
+  }
+
+  #littlefish{
+    margin: 10px 0 0 0;
+    width: 120px;
+  }
+
+  h2{
+    margin-top: 0;
+    float: none;
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+  }
+
+  .showinfo{
+    text-align: center;
+    border-top: dotted 2px black;
+    border-bottom: none;
+    padding: 20px 0 0;
+  }
+}
